@@ -1,0 +1,50 @@
+<!-- navbar -->
+<!-- [ngClass]="{ 'hidden': isHidden }" -->
+<nav id="navbar" class="fixed z-50 w-screen backdrop-blur-sm py-2">
+  <div class="font-[Inter] text-white">
+    <div class="flex w-[90%] ml-[5%] mr-[5%] justify-between items-center">
+
+      <!-- Logo -->
+      <div class="">
+        <img class="w-48 md:w-72" srcset="/assets/icons/navbarLogo.svg" alt="IoT Agile">
+        <!-- <div class="italic text-center mt-2">Soluciones a tú medida</div> -->
+      </div>
+
+      <!-- Primary nav -->
+      <!-- TODO: fix links -->
+      <div class="hidden md:flex justify-between w-[40%] lg:w-[30%] italic text-xl">
+        @for (item of menuItems; track item.title) {
+          <a [routerLink]="[item.url]" routerLinkActive="" class="">
+            {{item.title}}
+          </a>
+        }
+      </div>
+
+      <!-- Mobile button goes here -->
+      <div class="md:hidden flex items-center">
+        <button (click)="toggleMobileMenu()">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile menu -->
+    <!-- TODO: mobile menu annimation using gsap -->
+    <!-- TODO: fix links -->
+    @if (showMobileMenu) {
+      <div id="mobileMenu" class="mobileMenu border border-red-500 w-full backdrop-blur-sm md:hidden">
+        @for (item of menuItems; track item.title) {
+          <a [routerLink]="[item.url]" routerLinkActive="" class="block py-2 px-4 text-center">
+            {{item.title}}
+          </a>
+        }
+      </div>
+    }
+
+
+
+  </div>
+</nav>
