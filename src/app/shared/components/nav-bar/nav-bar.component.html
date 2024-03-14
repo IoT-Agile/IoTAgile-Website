@@ -35,7 +35,7 @@
     <!-- TODO: mobile menu annimation using gsap -->
     <!-- TODO: fix links -->
     @if (showMobileMenu) {
-      <div id="mobileMenu" class="mobileMenu border border-red-500 w-full backdrop-blur-sm md:hidden">
+      <div id="mobileMenu" class="mobileMenu w-full backdrop-blur-sm md:hidden">
         @for (item of menuItems; track item.title) {
           <a [routerLink]="[item.url]" routerLinkActive="" class="block py-2 px-4 text-center">
             {{item.title}}
