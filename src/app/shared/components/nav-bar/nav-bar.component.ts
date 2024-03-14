@@ -41,6 +41,7 @@ export class NavBarComponent {
       this.navHidden = false; // Scrolling up
     } else {
       this.navHidden = true; // Scrolling down
+      this.showMobileMenu = false; // Hide mobile menu when scrolling down
     }
     this.lastScrollPosition = currentScrollPosition;
 
