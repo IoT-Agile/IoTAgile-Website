@@ -5,8 +5,8 @@
     <div class="flex w-[90%] ml-[5%] mr-[5%] justify-between items-center">
 
       <!-- Logo -->
-      <div class="">
-        <img class="w-48 md:w-72" srcset="/assets/icons/navbarLogo.svg" alt="IoT Agile">
+      <div class="hover:cursor-pointer">
+        <img class="w-48 md:w-72" [routerLink]="[menuItems[0].url]" srcset="/assets/icons/navbarLogo.svg" alt="IoT Agile">
         <!-- <div class="italic text-center mt-2">Soluciones a tú medida</div> -->
       </div>
 
