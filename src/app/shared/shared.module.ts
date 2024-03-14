@@ -9,6 +9,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { PortfolioPageComponent } from './pages/portfolio-page/portfolio-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { EmailInputComponent } from './components/email-input/email-input.component';
 
 
 
@@ -22,6 +23,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     AboutPageComponent,
     PortfolioPageComponent,
     ContactPageComponent,
+    EmailInputComponent,
   ],
   imports: [
     CommonModule,
