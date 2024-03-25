@@ -20,10 +20,6 @@ const routes: Routes = [
     component: PortfolioPageComponent
   },
   {
-    path: 'contact',
-    component: ContactPageComponent
-  },
-  {
     path: '**',
     redirectTo: 'home',
   }
